@@ -30,7 +30,7 @@ contract ParKing {
         parkinglots[_lot].arrivaltime = now;
     }
 
-    function setDeparture(bytes32 _lot) public payable { //only then the poller goes down
+    function setDeparture(bytes32 _lot) public payable {
         require(msg.sender == parkinglots[_lot].car, "Wrong ownership!");
         require(msg.value >= (block.timestamp - parkinglots[_lot].arrivaltime) * parkinglots[_lot].pricepersec);
         parkinglots[_lot].lot_owner.transfer(block.timestamp - parkinglots[_lot].arrivaltime * parkinglots[_lot].pricepersec);
