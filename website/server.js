@@ -4,7 +4,7 @@ const port = 3000
 
 const fs = require('fs')
 
-const contract_address_source = fs.readFileSync("../contract/build/contracts/ParKing.json");
+const contract_address_source = fs.readFileSync("../contract/build/contracts/dataPark.json");
 var contract_address_source_obj = JSON.parse(contract_address_source);
 var contract_address = contract_address_source_obj.networks[5777].address;
 
