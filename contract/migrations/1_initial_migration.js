@@ -1,5 +1,5 @@
-var ParKing = artifacts.require("./ParKing.sol");
+var dataPark = artifacts.require("./dataPark.sol");
 
 module.exports = function(deployer) {
-  deployer.deploy(ParKing);
+  deployer.deploy(dataPark);
 };
